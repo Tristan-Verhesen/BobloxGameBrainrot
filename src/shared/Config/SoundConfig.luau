@@ -42,7 +42,9 @@ local SoundConfig = {
 
 SoundConfig.Cues = {
 	UIClick = { Layers = { { Id = Sounds.Tick, Volume = 0.6, Speed = 1.3, Variance = 0.05 } } },
-	UIError = { Layers = { { Id = Sounds.Tick, Volume = 0.7, Speed = 0.5 }, { Id = Sounds.Oof, Volume = 0.25, Speed = 1.6 } } },
+	UIError = {
+		Layers = { { Id = Sounds.Tick, Volume = 0.7, Speed = 0.5 }, { Id = Sounds.Oof, Volume = 0.25, Speed = 1.6 } },
+	},
 	Purchase = {
 		Layers = {
 			{ Id = Sounds.Tick, Volume = 0.7, Speed = 1.8 },
@@ -52,7 +54,10 @@ SoundConfig.Cues = {
 	},
 	Pickup = { Layers = { { Id = Sounds.Tick, Volume = 0.55, Speed = 1.9, Variance = 0.25 } } },
 	MachineClick = {
-		Layers = { { Id = Sounds.Tick, Volume = 0.5, Speed = 1.5, Variance = 0.2 }, { Id = Sounds.Land, Volume = 0.2, Speed = 1.8 } },
+		Layers = {
+			{ Id = Sounds.Tick, Volume = 0.5, Speed = 1.5, Variance = 0.2 },
+			{ Id = Sounds.Land, Volume = 0.2, Speed = 1.8 },
+		},
 	},
 	CarryFull = { Layers = { { Id = Sounds.Ouch, Volume = 0.35, Speed = 1.7 } } },
 	Deliver = {
@@ -82,7 +87,10 @@ SoundConfig.Cues = {
 	GetUp = { Layers = { { Id = Sounds.GetUp, Volume = 0.8, Speed = 1 } } },
 	EggShake = { Layers = { { Id = Sounds.Tick, Volume = 0.5, Speed = 0.9, Variance = 0.3 } } },
 	Hatch = {
-		Layers = { { Id = Sounds.Explosion, Volume = 0.5, Speed = 1.5 }, { Id = Sounds.Jump, Volume = 0.6, Speed = 1.6 } },
+		Layers = {
+			{ Id = Sounds.Explosion, Volume = 0.5, Speed = 1.5 },
+			{ Id = Sounds.Jump, Volume = 0.6, Speed = 1.6 },
+		},
 	},
 	HatchRare = {
 		Layers = {

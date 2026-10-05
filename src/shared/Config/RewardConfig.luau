@@ -34,7 +34,10 @@ RewardConfig.Playtime = {
 	{ Minutes = 10, Reward = { Type = "CashBoost", Minutes = 5 } :: Reward },
 	{ Minutes = 20, Reward = { Type = "Cash", Amount = 1500 } :: Reward },
 	{ Minutes = 40, Reward = { Type = "LuckBoost", Minutes = 10 } :: Reward },
-	{ Minutes = 60, Reward = { Type = "Bundle", Amount = 8000, CashBoostMinutes = 15, LuckBoostMinutes = 15 } :: Reward },
+	{
+		Minutes = 60,
+		Reward = { Type = "Bundle", Amount = 8000, CashBoostMinutes = 15, LuckBoostMinutes = 15 } :: Reward,
+	},
 }
 
 RewardConfig.CashBoostMultiplier = 2

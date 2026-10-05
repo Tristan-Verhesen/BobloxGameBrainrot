@@ -93,6 +93,12 @@ function MapLayout.RandomPointInZone(zoneId: string, rng: Random, margin: number
 	)
 end
 
+-- How far past the hub edge a position is, measured into the zone.
+function MapLayout.DepthInZone(zoneId: string, position: Vector3): number
+	local direction = MapLayout.GetZoneBounds(zoneId).Direction
+	return Vector3.new(position.X, 0, position.Z):Dot(direction) - MapLayout.HubHalf
+end
+
 -- Point on the hub edge where a zone's gate sits.
 function MapLayout.GatePosition(zoneId: string): Vector3
 	local zone = ZoneConfig.ById[zoneId]

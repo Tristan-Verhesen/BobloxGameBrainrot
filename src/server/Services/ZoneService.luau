@@ -17,6 +17,7 @@ local MapBuilder = require(script.Parent.MapBuilder)
 
 local ZoneService = {}
 
+local ENFORCE_DEPTH = 6 -- studs past the hub edge
 local lastWarned: { [Player]: number } = {}
 
 function ZoneService.Unlock(player: Player, zoneId: any): (boolean, string?)
@@ -53,8 +54,11 @@ local function enforceTick()
 		if not data or not root then
 			continue
 		end
-		local zoneId = MapLayout.ZoneAt((root :: BasePart).Position)
-		if zoneId and not data.Zones[zoneId] then
+		local position = (root :: BasePart).Position
+		local zoneId = MapLayout.ZoneAt(position)
+		-- Only act once they're properly inside, so leaning on a locked gate
+		-- from the hub side never teleports anyone.
+		if zoneId and not data.Zones[zoneId] and MapLayout.DepthInZone(zoneId, position) > ENFORCE_DEPTH then
 			local spawn = MapBuilder.Spawn
 			if spawn then
 				character:PivotTo(spawn.CFrame + Vector3.new(0, 4, 0))

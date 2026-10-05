@@ -69,7 +69,12 @@ local function rotateY(vector: Vector3, degrees: number): Vector3
 	return CFrame.Angles(0, math.rad(degrees), 0):VectorToWorldSpace(vector)
 end
 
-local function sound(parent: Instance, name: string, settings: { Id: string, Volume: number, Speed: number }, looped: boolean): Sound
+local function sound(
+	parent: Instance,
+	name: string,
+	settings: { Id: string, Volume: number, Speed: number },
+	looped: boolean
+): Sound
 	return Make.Instance("Sound", {
 		Name = name,
 		SoundId = settings.Id,
@@ -124,10 +129,24 @@ local function buildGreyboxDuck(stats: ZoneConfig.DuckStats): (Model, BasePart, 
 	piece("Part", Vector3.new(2.6, 0.5, 3.2), CFrame.new(2, -3.5, -1.5), orange)
 	piece("Part", Vector3.new(2.6, 0.5, 3.2), CFrame.new(-2, -3.5, -1.5), orange)
 	for _, side in { -1, 1 } do
-		local eye = piece("Ellipsoid", Vector3.new(1.3, 1.3, 1.3), CFrame.new(1.6 * side, 5.6, -6.6), Color3.fromRGB(255, 30, 30), Enum.Material.Neon)
-		Make.Instance("PointLight", { Color = Color3.fromRGB(255, 40, 40), Range = 10 * s, Brightness = 2, Parent = eye })
+		local eye = piece(
+			"Ellipsoid",
+			Vector3.new(1.3, 1.3, 1.3),
+			CFrame.new(1.6 * side, 5.6, -6.6),
+			Color3.fromRGB(255, 30, 30),
+			Enum.Material.Neon
+		)
+		Make.Instance(
+			"PointLight",
+			{ Color = Color3.fromRGB(255, 40, 40), Range = 10 * s, Brightness = 2, Parent = eye }
+		)
 		-- Angry eyebrows slanting down toward the beak.
-		piece("Part", Vector3.new(2.2, 0.45, 0.5), CFrame.new(1.5 * side, 6.7, -6.7) * CFrame.Angles(0, 0, math.rad(-22 * side)), Color3.fromRGB(30, 20, 20))
+		piece(
+			"Part",
+			Vector3.new(2.2, 0.45, 0.5),
+			CFrame.new(1.5 * side, 6.7, -6.7) * CFrame.Angles(0, 0, math.rad(-22 * side)),
+			Color3.fromRGB(30, 20, 20)
+		)
 	end
 	return model, root, 3.75 * s
 end
@@ -204,9 +223,15 @@ local function spawnDuck(zone: ZoneConfig.Zone, index: number)
 		Parent = root,
 	})
 
-	Make.Billboard(root, Vector2.new(14, 2.4) * math.sqrt(s), Vector3.new(0, 9.5 * s, 0), "🦆 " .. string.upper(stats.Name), {
-		TextColor3 = Color3.fromRGB(255, 230, 80),
-	})
+	Make.Billboard(
+		root,
+		Vector2.new(14, 2.4) * math.sqrt(s),
+		Vector3.new(0, 9.5 * s, 0),
+		"🦆 " .. string.upper(stats.Name),
+		{
+			TextColor3 = Color3.fromRGB(255, 230, 80),
+		}
+	)
 	local alert = Make.Billboard(root, Vector2.new(5, 5) * s, Vector3.new(0, 13 * s, 0), "❗", {
 		TextColor3 = Color3.fromRGB(255, 40, 40),
 	})

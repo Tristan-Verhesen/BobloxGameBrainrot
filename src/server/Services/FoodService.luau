@@ -212,7 +212,8 @@ local function createFoodPart(food: FoodConfig.Food, count: number): BasePart
 	})
 	Make.Billboard(part, Vector2.new(3, 3), Vector3.new(0, size * 0.9 + 0.8, 0), food.Emoji, {
 		TextStrokeTransparency = 1,
-	}).MaxDistance = 90
+	}).MaxDistance =
+		90
 	if food.Golden then
 		Make.Instance("PointLight", { Color = food.Color, Range = 10, Brightness = 2, Parent = part })
 		Make.Instance("Sparkles", { SparkleColor = food.Color, Parent = part })

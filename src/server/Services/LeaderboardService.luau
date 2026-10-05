@@ -94,7 +94,11 @@ local function refreshBoards()
 		for index, row in gui.Rows do
 			local entry = entries[index]
 			if entry then
-				local medal = if index == 1 then "🥇" elseif index == 2 then "🥈" elseif index == 3 then "🥉" else "#" .. index
+				local medal = if index == 1
+					then "🥇"
+					elseif index == 2 then "🥈"
+					elseif index == 3 then "🥉"
+					else "#" .. index
 				row.Text = string.format(
 					"%s %s  %s",
 					medal,
@@ -105,7 +109,11 @@ local function refreshBoards()
 				row.Text = ""
 			end
 		end
-		gui.Status.Text = "Global top " .. GameConfig.LeaderboardSize .. " · updates every " .. GameConfig.LeaderboardRefresh .. "s"
+		gui.Status.Text = "Global top "
+			.. GameConfig.LeaderboardSize
+			.. " · updates every "
+			.. GameConfig.LeaderboardRefresh
+			.. "s"
 	end
 end
 

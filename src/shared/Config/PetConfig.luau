@@ -33,27 +33,163 @@ local function pet(definition: Pet)
 end
 
 -- Basic egg
-pet({ Id = "SmolCapy", Name = "Smol Capy", Emoji = "🦫", Rarity = "Common", Multiplier = 1.1, Color = Color3.fromRGB(160, 110, 70), Size = 2 })
-pet({ Id = "SigmaSnail", Name = "Sigma Snail", Emoji = "🐌", Rarity = "Common", Multiplier = 1.15, Color = Color3.fromRGB(200, 170, 120), Size = 2 })
-pet({ Id = "MewingHamster", Name = "Mewing Hamster", Emoji = "🐹", Rarity = "Uncommon", Multiplier = 1.3, Color = Color3.fromRGB(240, 190, 130), Size = 2 })
-pet({ Id = "AuraAxolotl", Name = "Aura Axolotl", Emoji = "🦎", Rarity = "Rare", Multiplier = 1.6, Color = Color3.fromRGB(255, 160, 200), Size = 2.2 })
-pet({ Id = "GoofyGoose", Name = "Goofy Goose", Emoji = "🦢", Rarity = "Epic", Multiplier = 2.2, Color = Color3.fromRGB(245, 245, 245), Size = 2.4 })
-pet({ Id = "RizzRaccoon", Name = "Rizz Raccoon", Emoji = "🦝", Rarity = "Legendary", Multiplier = 3.5, Color = Color3.fromRGB(120, 120, 130), Size = 2.6 })
+pet({
+	Id = "SmolCapy",
+	Name = "Smol Capy",
+	Emoji = "🦫",
+	Rarity = "Common",
+	Multiplier = 1.1,
+	Color = Color3.fromRGB(160, 110, 70),
+	Size = 2,
+})
+pet({
+	Id = "SigmaSnail",
+	Name = "Sigma Snail",
+	Emoji = "🐌",
+	Rarity = "Common",
+	Multiplier = 1.15,
+	Color = Color3.fromRGB(200, 170, 120),
+	Size = 2,
+})
+pet({
+	Id = "MewingHamster",
+	Name = "Mewing Hamster",
+	Emoji = "🐹",
+	Rarity = "Uncommon",
+	Multiplier = 1.3,
+	Color = Color3.fromRGB(240, 190, 130),
+	Size = 2,
+})
+pet({
+	Id = "AuraAxolotl",
+	Name = "Aura Axolotl",
+	Emoji = "🦎",
+	Rarity = "Rare",
+	Multiplier = 1.6,
+	Color = Color3.fromRGB(255, 160, 200),
+	Size = 2.2,
+})
+pet({
+	Id = "GoofyGoose",
+	Name = "Goofy Goose",
+	Emoji = "🦢",
+	Rarity = "Epic",
+	Multiplier = 2.2,
+	Color = Color3.fromRGB(245, 245, 245),
+	Size = 2.4,
+})
+pet({
+	Id = "RizzRaccoon",
+	Name = "Rizz Raccoon",
+	Emoji = "🦝",
+	Rarity = "Legendary",
+	Multiplier = 3.5,
+	Color = Color3.fromRGB(120, 120, 130),
+	Size = 2.6,
+})
 
 -- Cursed egg
-pet({ Id = "NPCPigeon", Name = "NPC Pigeon", Emoji = "🐦", Rarity = "Common", Multiplier = 1.5, Color = Color3.fromRGB(150, 150, 170), Size = 2 })
-pet({ Id = "DeluluDog", Name = "Delulu Dog", Emoji = "🐶", Rarity = "Uncommon", Multiplier = 2, Color = Color3.fromRGB(220, 170, 100), Size = 2.2 })
-pet({ Id = "OhioOpossum", Name = "Ohio Opossum", Emoji = "🐀", Rarity = "Rare", Multiplier = 3, Color = Color3.fromRGB(200, 200, 210), Size = 2.2 })
-pet({ Id = "SusSeal", Name = "Sus Seal", Emoji = "🦭", Rarity = "Epic", Multiplier = 4.5, Color = Color3.fromRGB(110, 120, 140), Size = 2.4 })
-pet({ Id = "BrainrotBunny", Name = "Brainrot Bunny", Emoji = "🐰", Rarity = "Legendary", Multiplier = 7, Color = Color3.fromRGB(255, 200, 230), Size = 2.6 })
-pet({ Id = "QuackzillaJr", Name = "Quackzilla Jr.", Emoji = "🦆", Rarity = "Mythic", Multiplier = 15, Color = Color3.fromRGB(255, 220, 40), Size = 3 })
+pet({
+	Id = "NPCPigeon",
+	Name = "NPC Pigeon",
+	Emoji = "🐦",
+	Rarity = "Common",
+	Multiplier = 1.5,
+	Color = Color3.fromRGB(150, 150, 170),
+	Size = 2,
+})
+pet({
+	Id = "DeluluDog",
+	Name = "Delulu Dog",
+	Emoji = "🐶",
+	Rarity = "Uncommon",
+	Multiplier = 2,
+	Color = Color3.fromRGB(220, 170, 100),
+	Size = 2.2,
+})
+pet({
+	Id = "OhioOpossum",
+	Name = "Ohio Opossum",
+	Emoji = "🐀",
+	Rarity = "Rare",
+	Multiplier = 3,
+	Color = Color3.fromRGB(200, 200, 210),
+	Size = 2.2,
+})
+pet({
+	Id = "SusSeal",
+	Name = "Sus Seal",
+	Emoji = "🦭",
+	Rarity = "Epic",
+	Multiplier = 4.5,
+	Color = Color3.fromRGB(110, 120, 140),
+	Size = 2.4,
+})
+pet({
+	Id = "BrainrotBunny",
+	Name = "Brainrot Bunny",
+	Emoji = "🐰",
+	Rarity = "Legendary",
+	Multiplier = 7,
+	Color = Color3.fromRGB(255, 200, 230),
+	Size = 2.6,
+})
+pet({
+	Id = "QuackzillaJr",
+	Name = "Quackzilla Jr.",
+	Emoji = "🦆",
+	Rarity = "Mythic",
+	Multiplier = 15,
+	Color = Color3.fromRGB(255, 220, 40),
+	Size = 3,
+})
 
 -- Mythic meme egg
-pet({ Id = "DuckyDefector", Name = "Ducky Defector", Emoji = "🐤", Rarity = "Uncommon", Multiplier = 6, Color = Color3.fromRGB(255, 230, 90), Size = 2.2 })
-pet({ Id = "GigachadGecko", Name = "Gigachad Gecko", Emoji = "🦖", Rarity = "Rare", Multiplier = 10, Color = Color3.fromRGB(90, 200, 110), Size = 2.6 })
-pet({ Id = "ChaosChinchilla", Name = "Chaos Chinchilla", Emoji = "🐭", Rarity = "Epic", Multiplier = 18, Color = Color3.fromRGB(170, 170, 190), Size = 2.6 })
-pet({ Id = "CapyOverlord", Name = "Capy Overlord", Emoji = "👑", Rarity = "Legendary", Multiplier = 35, Color = Color3.fromRGB(255, 190, 60), Size = 3 })
-pet({ Id = "TheFinalBrainrot", Name = "The Final Brainrot", Emoji = "🧠", Rarity = "Mythic", Multiplier = 100, Color = Color3.fromRGB(255, 120, 180), Size = 3.4 })
+pet({
+	Id = "DuckyDefector",
+	Name = "Ducky Defector",
+	Emoji = "🐤",
+	Rarity = "Uncommon",
+	Multiplier = 6,
+	Color = Color3.fromRGB(255, 230, 90),
+	Size = 2.2,
+})
+pet({
+	Id = "GigachadGecko",
+	Name = "Gigachad Gecko",
+	Emoji = "🦖",
+	Rarity = "Rare",
+	Multiplier = 10,
+	Color = Color3.fromRGB(90, 200, 110),
+	Size = 2.6,
+})
+pet({
+	Id = "ChaosChinchilla",
+	Name = "Chaos Chinchilla",
+	Emoji = "🐭",
+	Rarity = "Epic",
+	Multiplier = 18,
+	Color = Color3.fromRGB(170, 170, 190),
+	Size = 2.6,
+})
+pet({
+	Id = "CapyOverlord",
+	Name = "Capy Overlord",
+	Emoji = "👑",
+	Rarity = "Legendary",
+	Multiplier = 35,
+	Color = Color3.fromRGB(255, 190, 60),
+	Size = 3,
+})
+pet({
+	Id = "TheFinalBrainrot",
+	Name = "The Final Brainrot",
+	Emoji = "🧠",
+	Rarity = "Mythic",
+	Multiplier = 100,
+	Color = Color3.fromRGB(255, 120, 180),
+	Size = 3.4,
+})
 
 PetConfig.Eggs = {
 	{

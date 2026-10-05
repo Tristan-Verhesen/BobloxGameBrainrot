@@ -63,9 +63,10 @@ function RebirthService.ApplyTitle(player: Player)
 		table.insert(lines, Make.Colored("🔁 Rebirth " .. data.Rebirths, Color3.fromRGB(200, 200, 255)))
 	end
 	if #lines > 0 then
-		local gui = Make.Billboard(head, Vector2.new(10, 1.2 * #lines), Vector3.new(0, 2.6, 0), table.concat(lines, "\n"), {
-			Name = "TitleLabel",
-		})
+		local gui =
+			Make.Billboard(head, Vector2.new(10, 1.2 * #lines), Vector3.new(0, 2.6, 0), table.concat(lines, "\n"), {
+				Name = "TitleLabel",
+			})
 		gui.Name = "TitleTag"
 		gui.MaxDistance = 80
 	end
@@ -120,7 +121,7 @@ local function rebirth(player: Player): (boolean, string?)
 	if rarity.Announce and GameConfig.AnnounceRareHatchesInServer then
 		Net.FireAll(
 			"Announce",
-			string.format("%s rolled the %s title \"%s\"!", player.DisplayName, rarity.Name, title.Text),
+			string.format('%s rolled the %s title "%s"!', player.DisplayName, rarity.Name, title.Text),
 			rarity.Color
 		)
 	end

@@ -76,9 +76,27 @@ local function buildGreyboxCapy(origin: CFrame): (Model, BasePart)
 		piece("Part", Vector3.new(6, 0.6, 0.6), Vector3.new(0, 12.2, -29), Color3.fromRGB(40, 25, 15), headModel), -- mouth
 		piece("Ellipsoid", Vector3.new(3.5, 3.5, 2), Vector3.new(-6.5, 25.5, -13), dark, headModel), -- ears
 		piece("Ellipsoid", Vector3.new(3.5, 3.5, 2), Vector3.new(6.5, 25.5, -13), dark, headModel),
-		piece("Ellipsoid", Vector3.new(2.4, 1.2, 1), Vector3.new(-4.8, 21, -25.2), Color3.fromRGB(20, 15, 10), headModel), -- chill eyes
-		piece("Ellipsoid", Vector3.new(2.4, 1.2, 1), Vector3.new(4.8, 21, -25.2), Color3.fromRGB(20, 15, 10), headModel),
-		piece("Ellipsoid", Vector3.new(5.5, 5, 5.5), Vector3.new(0, 27.5, -17), Color3.fromRGB(255, 150, 30), headModel), -- the iconic orange
+		piece(
+			"Ellipsoid",
+			Vector3.new(2.4, 1.2, 1),
+			Vector3.new(-4.8, 21, -25.2),
+			Color3.fromRGB(20, 15, 10),
+			headModel
+		), -- chill eyes
+		piece(
+			"Ellipsoid",
+			Vector3.new(2.4, 1.2, 1),
+			Vector3.new(4.8, 21, -25.2),
+			Color3.fromRGB(20, 15, 10),
+			headModel
+		),
+		piece(
+			"Ellipsoid",
+			Vector3.new(5.5, 5, 5.5),
+			Vector3.new(0, 27.5, -17),
+			Color3.fromRGB(255, 150, 30),
+			headModel
+		), -- the iconic orange
 		piece("Part", Vector3.new(0.5, 1.5, 0.5), Vector3.new(0, 30.6, -17), Color3.fromRGB(60, 140, 50), headModel), -- orange stem
 	}
 	for _, part in attached do
@@ -221,7 +239,9 @@ local function feastDance()
 	local origin = model:GetPivot()
 	local value = Make.Instance("NumberValue", { Value = 0 })
 	value.Changed:Connect(function(t)
-		model:PivotTo(origin * CFrame.new(0, math.abs(math.sin(t * math.pi * 6)) * 6, 0) * CFrame.Angles(0, t * math.pi * 4, 0))
+		model:PivotTo(
+			origin * CFrame.new(0, math.abs(math.sin(t * math.pi * 6)) * 6, 0) * CFrame.Angles(0, t * math.pi * 4, 0)
+		)
 	end)
 	local tween = TweenService:Create(value, TweenInfo.new(2.5, Enum.EasingStyle.Linear), { Value = 1 })
 	tween:Play()

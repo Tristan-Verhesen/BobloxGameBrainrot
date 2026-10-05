@@ -205,7 +205,7 @@ local function buildGate(zone: ZoneConfig.Zone)
 	})
 	gate:SetAttribute("ZoneId", zone.Id)
 	local lockText = string.format(
-		"🔒 %s\n%s\n<font size=\"40\">walk up & press E</font>",
+		'🔒 %s\n%s\n<font size="40">walk up & press E</font>',
 		string.upper(zone.Name),
 		Format.Cash(zone.Cost)
 	)
@@ -256,7 +256,7 @@ local function buildMachine(zone: ZoneConfig.Zone, forward: number, right: numbe
 	Make.SurfaceText(
 		screen,
 		Enum.NormalId.Front,
-		string.format("%s\n%s\n<font size=\"28\">CLICK ME!</font>", food.Emoji, zone.MachineName),
+		string.format('%s\n%s\n<font size="28">CLICK ME!</font>', food.Emoji, zone.MachineName),
 		{ TextColor3 = Color3.new(1, 1, 1) }
 	)
 	Make.Instance("ClickDetector", {
@@ -401,11 +401,8 @@ local function buildEggs()
 		Make.Instance("PointLight", { Color = egg.Color, Range = 14, Brightness = 1.5, Parent = eggPart })
 
 		local requiredZone = ZoneConfig.ById[egg.RequiredZone]
-		local header = string.format(
-			"<b>%s</b>\n%s",
-			egg.Name,
-			Make.Colored(Format.Cash(egg.Cost), Color3.fromRGB(120, 255, 140))
-		)
+		local header =
+			string.format("<b>%s</b>\n%s", egg.Name, Make.Colored(Format.Cash(egg.Cost), Color3.fromRGB(120, 255, 140)))
 		if requiredZone.Order > 1 then
 			header ..= "\n" .. Make.Colored("Needs " .. requiredZone.Name, Color3.fromRGB(255, 170, 120))
 		end
