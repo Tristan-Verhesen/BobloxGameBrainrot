@@ -1,0 +1,14 @@
+# Rojo / Studio
+*.rbxl.lock
+*.rbxlx.lock
+sourcemap.json
+
+# Tooling caches
+roblox.yml
+roblox.toml
+.luau-analyze-cache/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/settings.json

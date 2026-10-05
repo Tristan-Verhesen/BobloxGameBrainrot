@@ -1,0 +1,5 @@
+std = "roblox"
+
+[lints]
+# Config tables are long, and some helpers take many arguments.
+shadowing = "allow"
