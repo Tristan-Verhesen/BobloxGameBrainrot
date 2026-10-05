@@ -4425,6 +4425,7 @@ local function buildMachine(zone: ZoneConfig.Zone, forward: number, right: numbe
 		Color = food.Color,
 		Material = Enum.Material.Neon,
 		CanCollide = false,
+		CanQuery = false, -- let mouse clicks pass through to the body's ClickDetector
 		Parent = body,
 	})
 	Make.SurfaceText(
